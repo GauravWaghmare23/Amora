@@ -70,6 +70,8 @@ const NameScreen = () => {
               marginTop: 25,
               borderBottomColor: 'black',
               borderBottomWidth: 1,
+              fontSize: 20,
+              fontWeight: 'bold',
             }}
           />
           <TextInput
@@ -85,6 +87,8 @@ const NameScreen = () => {
               marginTop: 25,
               borderBottomColor: 'black',
               borderBottomWidth: 1,
+              fontSize: 20,
+              fontWeight: 'bold',
             }}
           />
         </View>
@@ -95,14 +99,15 @@ const NameScreen = () => {
             marginLeft: 'auto',
             width: 44,
             height: 44,
+            borderColor: '#581845',
             borderRadius: 22,
             borderWidth: 3,
-            backgroundColor: '#f7fae1',
+            backgroundColor: '#581845',
             alignItems: 'center',
             justifyContent: 'center',
           }}
         >
-          <FontAwesome6Icon name="arrow-right" size={35} color="black" />
+          <FontAwesome6Icon name="arrow-right" size={35} color="white" />
         </TouchableOpacity>
       </View>
     </SafeAreaView>

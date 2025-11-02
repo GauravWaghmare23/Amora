@@ -6,11 +6,11 @@ import FontAwesome6Icon from 'react-native-vector-icons/FontAwesome6';
 import { useNavigation } from '@react-navigation/native';
 
 const EmailScreen = () => {
-  const [email,setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const navigation = useNavigation();
   const handleNext = () => {
     navigation.navigate('Password');
-  }
+  };
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#f7fae1' }}>
       <View style={{ marginTop: 100, marginHorizontal: 20 }}>
@@ -48,7 +48,10 @@ const EmailScreen = () => {
               fontFamily: 'GezzaPro-Bold',
             }}
           >
-            What's your Email?
+            Please provide a valid email
+          </Text>
+          <Text style={{ color: 'gray', fontSize: 10 }}>
+            Email verification help us keep the account secure
           </Text>
           <TextInput
             value={email}
@@ -63,8 +66,13 @@ const EmailScreen = () => {
               marginTop: 25,
               borderBottomColor: 'black',
               borderBottomWidth: 1,
+              fontSize: 20,
+              fontWeight: 'bold',
             }}
           />
+          <Text style={{ color: 'gray', fontSize: 12 }}>
+            Note: We will not share your email with anyone
+          </Text>
         </View>
         <TouchableOpacity
           onPress={handleNext}
@@ -73,14 +81,15 @@ const EmailScreen = () => {
             marginLeft: 'auto',
             width: 44,
             height: 44,
+            borderColor: '#581845',
             borderRadius: 22,
             borderWidth: 3,
-            backgroundColor: '#f7fae1',
+            backgroundColor: '#581845',
             alignItems: 'center',
             justifyContent: 'center',
           }}
         >
-          <FontAwesome6Icon name="arrow-right" size={35} color="black" />
+          <FontAwesome6Icon name="arrow-right" size={35} color="white" />
         </TouchableOpacity>
       </View>
     </SafeAreaView>
